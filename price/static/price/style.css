@@ -20,14 +20,14 @@ li.nav-menu a{
 }
 
 li.nav-menu a:hover{
-    background-color: greenyellow;
+    background-color: green;
     text-decoration: none;
     color: white;
     
 }
 
 .active {
-    background-color:greenyellow;
+    background-color:green;
 }
 
 footer {
