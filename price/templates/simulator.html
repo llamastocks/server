@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block page_content %}
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{% static "price/style.css" %}"> 
+    <div class="logo">
+        <h1>LlamaStocks</h1>
+    
+    </div> 
+        <nav id="site-nav">
+            <div id="menu-container">
+                <ul id="primary-menu">
+                    <li class="nav-menu" id="menu-1">
+                        <a href='{% url 'index' %}'>
+                            Inicio
+                        </a>
+                    </li>
+                    <li class="nav-menu" id="menu-2">
+                        <a class="active" href='{% url 'simulator' %}'>
+                            Simulador
+                        </a>
+                    </li>
+                    <li class="nav-menu" id="menu-3">
+                        <a href='{% url 'donations' %}'>
+                            Donaciones
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+</head>
+
+<div>
+    <h5>Calculadora de acciones BVL</h5>
+    <p>Utiliza esta calculadora para sacar cuántas acciones obtendrías con el capital que deseas</p>
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        {% if result %}
+            <p>{{result}}</p>
+        {% endif %}
+
+        
+        
+
+        <input type="submit" value="Calcular">
+    </form>
+</div>
+<footer>
+    <div>
+        <p>LlamaStocks, Herramientas informativas para todos</p>
+    </div>
+</footer>
+</html>
+{% endblock %}

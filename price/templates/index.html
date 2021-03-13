@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block page_content %}
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{% static "price/style.css" %}">
+    <div class="logo">
+        <h1>LlamaStocks</h1>
+        
+    </div>    
+        <nav id="site-nav">
+            <div id="menu-container">
+                <ul id="primary-menu">
+                    <li class="nav-menu" id="menu-1">
+                        <a class="active" href='{% url 'index' %}'>
+                            Inicio
+                        </a>
+                    </li>
+                    <li class="nav-menu" id="menu-2">
+                        <a href='{% url 'simulator' %}'>
+                            Simulador
+                        </a>
+                    </li>
+                    <li class="nav-menu" id="menu-3">
+                        <a href='{% url 'donations' %}'>
+                            Donaciones
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+</head>
+
+<div class="main-div">
+
+    <h3>
+        ¿Qué hace LlamaStocks?
+    </h3>
+    <h5>
+        Puedes ver noticias sin tener suscripción
+    </h5>
+    <p>
+        ¿Cómo lo puedes lograr? A través de tu e-mail envía un correo a la dirección llamastocks@zohomail.com
+        con el asunto "SPIT" (Escupe en inglés) y en el contenido del correo debes colocar el URL de la noticia que
+        deseas leer pero no puedes acceder por no estar suscrito. Puedes poner mas de un link pero separado con espacios.
+    </p>
+    <p>
+        Mira el siguiente ejemplo:
+    </p>
+    <div id="image_1">
+        <img src="{% static 'price/llamastocks_1.png'%}" alt="" class="index-img">
+        <p class="text-image">
+            Con tu correo envías el URL a la dirección de la imagen y con el asunto SPIT
+        </p>
+
+    </div>
+    <p>
+        ¿Qué obtienes enviando este correo?
+        Con este link enviado a LlamaStocks, luego de unos minutos, el correo te va a responder con el titular
+        y el contenido de lo que deseas leer en el correo de respuesta. Si enviaste más de un link, te llegarán correos
+        de acuerdo al número de links que enviaste. 
+    </p>
+    <p>
+        La respuesta sería como en la siguiente imagen:
+    </p>
+    <div id="image_2">
+        <img src="{% static 'price/llamastocks_2.png'%}" alt="" class="index-img">
+        <p class="text-image">
+            Se recibe el correo de LlamaStocks con la noticia contenida en el link enviado
+        </p>
+    </div>
+    <h5>
+        Unos comentarios sobre esta función:
+    </h5>
+    <ul>
+        <li class="lists">
+            No hemos probado la función con todos los diarios existentes y por existir en el mundo
+            pero si sabemos que no funciona la extracción de noticias en todas las páginas.
+            Es cuestión de ir probando con cuáles funciona y cuáles no.
+        </li>
+        <li class="lists">
+            Por ahora, el contenido que se envía de las noticias está un poco desordenado. Con el tiempo se irá arreglando los formatos.
+        </li>
+        <li class="lists">
+            La idea de utilizar esta función es poder transparentar la información para todos, especialmente para aquellos que no pueden
+            acceder a las suscripciones digitales. Para aquellos que si pueden acceder, las suscripciones digitales tienen bastantes ventajas
+            además de las noticias. Esta página no busca desalentar a que te suscribas o que canceles tu suscripción digital. 
+        </li>
+    </ul>
+
+    <h5>
+        Puedes recibir noticias cada 3 horas
+    </h5>
+    <p>
+        Se sabe que el valor de una noticia es mayor mientras se conozca antes. Por ello, si deseas puede enviarnos un correo a LlamaStocks
+        y así poder recibir un correo cada 3 horas con las últimas noticias del Perú y el mundo. Ten la seguridad de que no se enviará otros correos además de las noticias.
+    </p>
+    <div id="image_3">
+        <img src="{% static 'price/llamastocks_3.png'%}" alt="" class="index-img">
+        <p class="text-image">
+            Podrás recibir este correo con varios diarios y secciones en un solo lugar.
+        </p>
+    </div>
+    <h5>
+        Comentarios antes de contactarnos:
+    </h5>
+    <ul>
+        <li class="lists">
+            Por ahora, esta función solo envía noticias de 2 diarios importantes de Perú y 1 diario internacional. Se ampliará a más diarios a medida que conozcamos las preferencias de 
+            ustedes. También se acomodará qué diarios desea recibir cada usuario.
+        </li>
+        <li class="lists">
+            Las noticias se envían cada 3 horas porque se trata de equilibrar la recepción de noticias en tiempo real y el spam de los correos. Se podría enviar cada hora para que puedan
+            enterarse con mayor frecuencia de noticias que pueden resultar importantes para ustedes, pero significaría recibir un correo cada hora incluso durante las noches.
+            Con el tiempo se adaptará la frecuencia de los correos para cada usuario que desee recibir las noticias.
+        </li>
+        <li class="lists">
+            Si bien esta función tiene más orden que la función SPIT, siempre aparecerán errores. Sería ideal que ustedes nos ayuden enviando comentarios constructivos para realizar mejoras constantemente.
+        </li>
+        <li class="lists">
+            Si desean que se deje de enviar noticias, solo deben enviar un correo a llamastocks@zohomail.com
+        </li>
+    </ul>
+
+    <h5>
+        
+    </h5>
+    
+</div>
+
+<footer>
+    <div>
+        <p>LlamaStocks, Herramientas informativas para todos</p>
+    </div>
+</footer>
+</html>
+{% endblock %}

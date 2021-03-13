@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block page_content %}
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{% static "price/style.css" %}">
+    <div class="logo">
+        <h1>LlamaStocks</h1>
+        
+    </div>    
+        <nav id="site-nav">
+            <div id="menu-container">
+                <ul id="primary-menu">
+                    <li class="nav-menu" id="menu-1">
+                        <a href='{% url 'index' %}'>
+                            Inicio
+                        </a>
+                    </li>
+                    <li class="nav-menu" id="menu-2">
+                        <a href='{% url 'simulator' %}'>
+                            Simulador
+                        </a>
+                    </li>
+                    <li class="nav-menu" id="menu-3">
+                        <a class="active" href='{% url 'donations' %}'>
+                            Donaciones
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+</head>
+
+<div class="main-div">
+    <h5>
+        ¿Qué otras cosas Hace LlamaStocks?
+    </h5>
+    <p>
+        LlamaStocks busca transparentar información a través del <em>web-scraping</em> para que cada usuario le de valor. Primero queremos
+        que las funciones mostradas se ejecuten correctamente y, luego podemos pensar en más. Esperamos les sea de gran ayuda.
+        Si desean, pueden donar con el botón de abajo para comprarnos un café.
+    </p>
+    <a href="https://www.paypal.com/donate?hosted_button_id=7AQU55W24JKWN" target="_blank" rel="nofollow noopener">
+        <img src="{% static 'price/coffee.png'%}" alt="Click to donate" class="donation-img">
+    </a>
+    <p>
+        Muchas gracias.
+    </p>
+    <p>
+        LlamaStocks
+    </p>
+</div>
+
+<footer>
+    <div>
+        <p>LlamaStocks, Herramientas informativas para todos</p>
+    </div>
+</footer>
+</html>
+{% endblock %}
